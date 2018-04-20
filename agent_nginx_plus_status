@@ -80,11 +80,8 @@ def check_unicode(value):
         return value
 
 def check_nginx_plus_get_dict(address):
-    # r = requests.get(address)
-    # status_data = r.json()
-    # hijack: use file instead
-    f = open("text.txt", 'r').read()
-    return json.loads(f)
+    r = requests.get(address)
+    status_data = r.json()
 
 try:
     opts, args = getopt.getopt(sys.argv[1:], short_options, long_options)
