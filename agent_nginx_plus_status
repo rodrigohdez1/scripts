@@ -81,7 +81,7 @@ def check_unicode(value):
 
 def check_nginx_plus_get_dict(address):
     r = requests.get(address)
-    status_data = r.json()
+    return status_data = r.json()
 
 try:
     opts, args = getopt.getopt(sys.argv[1:], short_options, long_options)
